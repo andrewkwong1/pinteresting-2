@@ -5,7 +5,11 @@
 <h1> Welcome to McClatchy Wrestling! </h1>
 <body>
 	<p> Home of the Lions! </p>
-	<p> Sign up <%= link_to "Here", "#", class: "btn btn-primary" %>
-
+	<p> 
+	<% if not user_signed_in? %>	
+	 	<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+        <% end %> 
+    <p>   
 </div><class: "btn btn-primary" %>
 </center>
